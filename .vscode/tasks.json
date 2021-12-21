@@ -1,0 +1,26 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run program",
+      "type": "shell",
+      "command": "python3 app.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker Build",
+      "type": "shell",
+      "command": "docker build --tag simpleserver .",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docker run",
+      "type": "shell",
+      "command": "docker run --name python-app -p 5000:5000 simpleserver",
+      "problemMatcher": []
+    }
+  ]
+}
