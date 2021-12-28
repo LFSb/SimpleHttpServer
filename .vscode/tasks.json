@@ -21,6 +21,19 @@
       "type": "shell",
       "command": "docker run --name python-app -p 5000:5000 simpleserver",
       "problemMatcher": []
+    },
+    {
+      "label": "Minikube start",
+      "type": "shell",
+      "command": "minikube start",
+      "problemMatcher": []
+    },
+    {
+      "label": "Minikubectl Create Deployment",
+      "type": "shell",
+      "command": "minikube kubectl -- create -f deployment.yaml",
+      "problemMatcher": [],
+      "dependsOn": "Minikube start"
     }
   ]
 }
